@@ -14,7 +14,7 @@ module.exports = {
 
         if (!interaction.isButton()) return;
 
-        if (!["compra", "error", "donar", "other"].includes(customId)) return;
+        if (!["report", "bugs", "donar", "other"].includes(customId)) return;
 
         if (!guild.members.me.permissions.has(ManageChannels))
             interaction.reply({ content: "No tienes los permisos suficientes.", ephemeral: true});
@@ -33,9 +33,17 @@ module.exports = {
                       id: member.id,
                       allow: [ViewChannel, SendMessages, ReadMessageHistory],
                     },
-                    ...guild.members.cache
-                      .filter(m => m.permissions.has(BanMembers))
-                      .map(m => ({ id: m.id, allow: [ViewChannel, SendMessages, ReadMessageHistory] }))
+                    {
+                        id: '1072997851782717440',
+                        allow: [ViewChannel, SendMessages, ReadMessageHistory],
+                    },
+                    {
+                        id: '770830933565112391',
+                        allow: [ViewChannel, SendMessages, ReadMessageHistory],
+                    },
+                    // ...guild.members.cache
+                    //   .filter(m => m.permissions.has(BanMembers))
+                    //   .map(m => ({ id: m.id, allow: [ViewChannel, SendMessages, ReadMessageHistory] }))
                   ],
                   
                 

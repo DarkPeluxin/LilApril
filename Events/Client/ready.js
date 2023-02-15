@@ -9,7 +9,9 @@ module.exports = {
     async execute(client) {
         try {
             mongoose.set('strictQuery', false);
-            await mongoose.connect('mongodb://localhost:27017/DiscordData', { useNewUrlParser: true, useUnifiedTopology: true });
+            await mongoose.connect(config.mongodb || '', {
+                keepAlive: true,
+            });
 
             if (mongoose.connect) {
                 console.log('MongoDB connection successful.')

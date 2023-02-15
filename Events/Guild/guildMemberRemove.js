@@ -9,7 +9,7 @@ module.exports = {
    */
   execute(member) {
     const {user, guild} = member;
-    const memberLogs = member.guild.channels.cache.get('1018929522088873994');
+    const memberLogs = member.guild.channels.cache.get('717874899267616821');
     const leaveMessage = `<@${member.id}> se fue, pero no por siempre.`;
     
     const leaveEmbed = new EmbedBuilder()
@@ -21,6 +21,6 @@ module.exports = {
             .setThumbnail('https://cdn.discordapp.com/icons/997894150261321829/26b189477d51b700fa5e995413e53beb.webp')
 
     memberLogs.send({embeds: [leaveEmbed]});
-    console.log(`${member.id} left the guild.`)
+    console.log(`${member.id} Abandonó el Discord.`)
   },
 };

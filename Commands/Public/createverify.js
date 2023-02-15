@@ -14,13 +14,13 @@ module.exports = {
         const channel = interaction.options.getChannel('channel');
         const verifyEmbed = new EmbedBuilder()
         .setTitle("Verificación")
-        .setDescription('Haga click al botón y obtén acceso a los canales de compra.')
+        .setDescription('Haga click al botón y obtén acceso a los canales de Minecraft.')
         .setColor(0x5fb041)
         let sendChannel = channel.send({
             embeds: ([verifyEmbed]),
             components: [
                 new ActionRowBuilder().setComponents(
-                    new ButtonBuilder().setCustomId('verify').setLabel('Verificar').setStyle(ButtonStyle.Success),
+                    new ButtonBuilder().setCustomId('verify').setLabel('PREPALAND 2.0').setStyle(ButtonStyle.Success),
                 ),
             ],
         });
